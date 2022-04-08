@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+
+    <record id="pos_rating_view_form" model="ir.ui.view">
+        <field name="name">pos.rating.view.form.inherit.product.product</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='categ_id']" position="after">
+                <field name="rating" help="product rating" />
+            </xpath>
+        </field>
+    </record>
+
+<!--    <t t-extend="ProductItem">-->
+<!--        <t t-jquery="div.product-img" t-operation="append">-->
+<!--           <t t-esc="product.name"/>-->
+<!--        </t>-->
+<!--    </t>-->
+
+</data>
+</odoo>
